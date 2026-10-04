@@ -56,7 +56,7 @@
 <script>
 const nav=document.getElementById('nav');document.querySelector('.hamb').onclick=()=>nav.classList.toggle('open');document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
 const oferta=document.getElementById('oferta');document.querySelectorAll('.price').forEach(x=>x.onclick=()=>{oferta.value=x.dataset.v;document.getElementById('comprar').scrollIntoView({behavior:'smooth'})});
-const modal=document.getElementById('modal'),msg=document.getElementById('msg');document.getElementById('form').onsubmit=e=>{e.preventDefault();let t=`PEDIDO SALDO STORE\nNombre: ${document.getElementById('nombre').value.trim()}\nNúmero Cubacel: ${document.getElementById('tel').value.trim()}\nOferta: ${oferta.value}\nMétodo de pago: ${document.getElementById('pago').value}\n\nPor favor confirmar el pedido.`;msg.value=t;document.getElementById('s2').href='sms:51516054?body='+encodeURIComponent(t);
+const modal=document.getElementById('modal'),msg=document.getElementById('msg');document.getElementById('form').onsubmit=e=>{e.preventDefault();let t=`PEDIDO SALDO STORE\nNombre: ${document.getElementById('nombre').value.trim()}\nNúmero Cubacel: ${document.getElementById('tel').value.trim()}\nOferta: ${oferta.value}\nMétodo de pago: ${document.getElementById('pago').value}\n\nPor favor asegúrese de confirmar su pago con el ID de transacción o envié captura de pantalla de la transferencia por vía WhatsApp.`;msg.value=t;document.getElementById('s2').href='sms:51516054?body='+encodeURIComponent(t);
 document.getElementById('s3').href='sms:58144818?body='+encodeURIComponent(t);
 document.getElementById('s4').href='sms:55542317?body='+encodeURIComponent(t);
 const waMsg=encodeURIComponent(t);
